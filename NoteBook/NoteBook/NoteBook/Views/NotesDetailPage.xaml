@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+              xmlns:custom="clr-namespace:NoteBook.CustomRenderers"
+             xmlns:local="clr-namespace:NoteBook"
+             mc:Ignorable="d"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="NoteBook.Views.NotesDetailPage"
+             BackgroundColor="{StaticResource Dark}">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="X" Clicked="OnCancelClicked"  />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout HeightRequest="40" VerticalOptions="Start" Orientation="Horizontal" >
+                <Image     Margin="10,10,0,0"
+                VerticalOptions="Start" HorizontalOptions="Start">
+                    <Image.Source>
+                        <FontImageSource FontFamily="{StaticResource Font}"
+                                     Glyph="{x:Static local:Icons.back}" 
+                                     Size="20" 
+                                       />
+                    </Image.Source>
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnCancelClicked" />
+                    </Image.GestureRecognizers>
+
+                </Image>
+
+
+                <Image     Margin="0,10,20,0"
+                VerticalOptions="Start" HorizontalOptions="EndAndExpand">
+                    <Image.Source>
+                        <FontImageSource FontFamily="{StaticResource Font}"
+                                     Glyph="{x:Static local:Icons.bin}" 
+                                     Size="20" 
+                                       />
+                    </Image.Source>
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnDeleteClicked" />
+                    </Image.GestureRecognizers>
+
+                </Image>
+              
+
+
+            </StackLayout>
+      
+
+        
+            <StackLayout >
+                <custom:CustomEntry BackgroundColor="{StaticResource Dark}" Text="{Binding Title}"
+                   Placeholder="Title"  FontAttributes="Bold" 
+                       TextColor="{StaticResource BodyTextColor}"
+              PlaceholderColor="{StaticResource BodyTextColor}" 
+            />
+                <custom:CustomEditor VerticalOptions="FillAndExpand" Text="{Binding Notes}"
+                BackgroundColor="{StaticResource Dark}" Placeholder="Notes" HeightRequest="150"
+              PlaceholderColor="{StaticResource BodyTextColor}" TextColor="{StaticResource BodyTextColor}"
+            />
+                <Button Text="Save" Clicked="OnSaveClicked"  VerticalOptions="EndAndExpand"
+                        BackgroundColor="{StaticResource Dark}" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

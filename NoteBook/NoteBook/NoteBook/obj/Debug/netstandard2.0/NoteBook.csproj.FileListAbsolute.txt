@@ -1,0 +1,16 @@
+C:\Users\charitynyanchera\Desktop\Github\NoteBook\NoteBook\NoteBook\bin\Debug\netstandard2.0\NoteBook.deps.json
+C:\Users\charitynyanchera\Desktop\Github\NoteBook\NoteBook\NoteBook\bin\Debug\netstandard2.0\NoteBook.dll
+C:\Users\charitynyanchera\Desktop\Github\NoteBook\NoteBook\NoteBook\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\charitynyanchera\Desktop\Github\NoteBook\NoteBook\NoteBook\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\charitynyanchera\Desktop\Github\NoteBook\NoteBook\NoteBook\obj\Debug\netstandard2.0\NoteBook.AssemblyInfoInputs.cache
+C:\Users\charitynyanchera\Desktop\Github\NoteBook\NoteBook\NoteBook\obj\Debug\netstandard2.0\NoteBook.AssemblyInfo.cs
+C:\Users\charitynyanchera\Desktop\Github\NoteBook\NoteBook\NoteBook\bin\Debug\netstandard2.0\ref\NoteBook.dll
+C:\Users\charitynyanchera\Desktop\Github\NoteBook\NoteBook\NoteBook\bin\Debug\netstandard2.0\NoteBook.pdb
+C:\Users\charitynyanchera\Desktop\Github\NoteBook\NoteBook\NoteBook\obj\Debug\netstandard2.0\NoteBook.dll
+C:\Users\charitynyanchera\Desktop\Github\NoteBook\NoteBook\NoteBook\obj\Debug\netstandard2.0\ref\NoteBook.dll
+C:\Users\charitynyanchera\Desktop\Github\NoteBook\NoteBook\NoteBook\obj\Debug\netstandard2.0\NoteBook.pdb
+C:\Users\charitynyanchera\Desktop\Github\NoteBook\NoteBook\NoteBook\obj\Debug\netstandard2.0\NoteBook.csprojAssemblyReference.cache
+C:\Users\charitynyanchera\Desktop\Github\NoteBook\NoteBook\NoteBook\obj\Debug\netstandard2.0\Views\NotesPage.xaml.g.cs
+C:\Users\charitynyanchera\Desktop\Github\NoteBook\NoteBook\NoteBook\obj\Debug\netstandard2.0\NoteBook.csproj.CoreCompileInputs.cache
+C:\Users\charitynyanchera\Desktop\Github\NoteBook\NoteBook\NoteBook\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\charitynyanchera\Desktop\Github\NoteBook\NoteBook\NoteBook\obj\Debug\netstandard2.0\Views\NotesDetailPage.xaml.g.cs

@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+            xmlns:custom="clr-namespace:NoteBook.CustomRenderers"
+             xmlns:local="clr-namespace:NoteBook"
+             
+            NavigationPage.HasNavigationBar="False"
+             
+             mc:Ignorable="d"
+             x:Class="NoteBook.Views.NotesPage"
+             BackgroundColor="{StaticResource Dark}"
+             Padding="20,0,10,0">
+    
+    <ContentPage.Content>
+
+        <StackLayout Spacing="20">
+            <pancake:PancakeView BackgroundColor="{StaticResource Dark}"
+                                 VerticalOptions="Start" HeightRequest="50" Margin="0,15,0,0"
+                                 CornerRadius="7" 
+                                 
+                                 >
+                <pancake:PancakeView.Border>
+                    <pancake:Border Thickness="1" 
+                                Color="{StaticResource BorderColor}" DrawingStyle="Outside" />
+                </pancake:PancakeView.Border >
+                <StackLayout Orientation="Horizontal"
+                          HeightRequest="35"
+                          BackgroundColor="{StaticResource Dark}"
+                           
+                           Spacing="20">
+
+
+
+                    <StackLayout Spacing="5"  Orientation="Horizontal">
+                    <Image HorizontalOptions="Start" VerticalOptions="Center" 
+                       Margin="20,0,0,0">
+                        <Image.Source>
+                            <FontImageSource FontFamily="{StaticResource Font}"
+                                     Glyph="{x:Static local:Icons.menu}" 
+                                     Size="20" 
+                                       />
+                        </Image.Source>
+
+                    </Image>
+                    <custom:CustomEntry  WidthRequest="170"
+                        x:Name="searchBar" Placeholder="Search Your Notes"        TextChanged="searchBar_BindingContextChanged"
+                                   HorizontalOptions="Center" VerticalOptions="Center"
+                                   PlaceholderColor="Gray" />
+                        
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" Spacing="20" Padding="0,0,20,0" 
+                             HorizontalOptions="EndAndExpand" >
+                                  
+
+                        <Image>
+
+                            <Image.Source>
+                                <FontImageSource FontFamily="{StaticResource Font}"
+                                     Glyph="{x:Static local:Icons.bin}" 
+                                     Size="20" 
+                                       />
+                            </Image.Source>
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="DeleteAll" />
+                            </Image.GestureRecognizers>
+
+                        </Image>
+                        <Image HorizontalOptions="End" VerticalOptions="Center" 
+                       >
+                            <Image.Source>
+                                <FontImageSource FontFamily="{StaticResource Font}"
+                                     Glyph="{x:Static local:Icons.plus}" 
+                                     Size="20" 
+                                       />
+                            </Image.Source>
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnAddClicked" />
+                            </Image.GestureRecognizers>
+
+                        </Image>
+
+
+
+                    </StackLayout>
+
+
+
+
+
+
+                                    </StackLayout>
+            </pancake:PancakeView>
+
+
+
+            <CollectionView  x:Name="myNotes"  SelectionChanged="myNotes_SelectionChanged" 
+                             SelectionMode="Single">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical" Span="2" 
+                                     VerticalItemSpacing="10" HorizontalItemSpacing="10" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <pancake:PancakeView CornerRadius="10">
+                            <pancake:PancakeView.Border>
+                                <pancake:Border Thickness="1" 
+                                            Color="{StaticResource BorderColor}" 
+                                            DrawingStyle="Outside" />
+                            </pancake:PancakeView.Border >
+                            <Grid Margin="10,0,0,0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Label Text="{Binding Title}" FontAttributes="Bold" TextColor="{StaticResource White}" MaxLines="1" />
+                                <Label Text="{Binding Notes}" TextColor="{StaticResource BodyTextColor}" Grid.Row="1" MaxLines="15"/>
+                            </Grid>
+
+
+
+                        </pancake:PancakeView>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

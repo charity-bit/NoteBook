@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="NoteBook.App">
+    <Application.Resources>
+        <Color x:Key="BorderColor">#9D9898</Color>
+        <Color x:Key="BodyTextColor">#707070</Color>
+        <Color x:Key="Dark">#222222</Color>
+
+        <Color x:Key="White">#FFFFFF</Color>
+        <ResourceDictionary>
+            <OnPlatform x:TypeArguments="x:String" 
+                    x:Key="Font">
+                <On Platform="iOS" Value="icomoon" />
+                <On Platform="Android" Value="icomoon.ttf#Regular" />
+            </OnPlatform>
+
+
+            <!--  <Style TargetType="Label">
+                <Setter Property="TextColor"
+                    Value="{AppThemeBinding Dark={DynamicResource DarkText}, Light={DynamicResource LightTitleText}}"/>
+            </Style>
+
+            <Style TargetType="Entry">
+                <Setter Property="TextColor"
+                    Value="{AppThemeBinding Dark={DynamicResource DarkText}, Light={DynamicResource DarkText}}"/>
+                <Setter Property="BackgroundColor"
+                    Value="{AppThemeBinding Dark={DynamicResource DarkText}, Light={DynamicResource LightTitleText}}"/>
+            </Style>
+
+ -->
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
