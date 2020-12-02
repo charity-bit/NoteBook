@@ -3,7 +3,7 @@
 An App Where You Can Create ,Edit and Delete Notes.  
 Uses SQLite Database in a Read and Write Form.
 
-There is really , nothing special here,what I was trying to showcase was the UI ,that I found was really awsome.
+There is really , nothing special here,what I was trying to showcase was the UI ,that I found was really awsome yet still simple.
 I used a Grid Layout for collection view to display The notes in an somehow an uneven  rows.
 
 ![displayNotesPage](https://github.com/charity-bit/NoteBook/blob/master/NoteBook/Screenshots/Screenshot_2020-08-17-22-45-41-40.png?raw=true)
